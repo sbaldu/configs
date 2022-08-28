@@ -109,6 +109,6 @@ alias ls="lsd -l --group-dirs first"
 alias nano="nano -gblm"
 alias pdf="okular"
 alias t="source toGSOC.sh"
+
+eval "$(ssh-agent -s)" && ssh-add ~/archKey; clear
 neofetch
-eval "$(ssh-agent -s)"
-ssh-add ~/archKey
