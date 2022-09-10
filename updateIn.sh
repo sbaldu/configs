@@ -1,6 +1,7 @@
 
 cp ~/.zshrc .
 cp ~/.vimrc .
+cp ~/.config/neofetch/config.conf .
 cp ~/.config/alacritty/alacritty.yml . 
 cp ~/.oh-my-zsh/themes/myTheme.zsh-theme . 
 cp ~/.config/awesome/rc.lua . 
