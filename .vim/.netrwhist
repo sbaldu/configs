@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/home/simone/.config/neofetch'
+let g:netrw_dirhist_4='/home/simone/.config/awesome/themes/powerarrow-dark'
+let g:netrw_dirhist_3='/home/simone/.oh-my-zsh/themes'
+let g:netrw_dirhist_2='/home/simone/.oh-my-zsh'
+let g:netrw_dirhist_1='/home/simone/.config/awesome/themes/holo'
