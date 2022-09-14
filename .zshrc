@@ -75,7 +75,7 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-alias ls="lsd -l --group-dirs first"
+alias ls="lsd -lh --group-dirs first"
 alias nano="nano -gblm"
 alias pdf="zathura"
 alias t="source toGSOC.sh"
