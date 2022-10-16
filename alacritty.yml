@@ -4,27 +4,17 @@
 #  - /path/to/alacritty.yml
 
 window:
-  # Window dimensions (changes require restart)
-  #
-  # Number of lines/columns (not pixels) in the terminal. The number of columns
-  # must be at least `2`, while using a value of `0` for columns and lines will
-  # fall back to the window manager's recommended size.
+  # Number of lines/columns (not pixels) in the terminal. 
   dimensions:
     columns: 120
     lines: 40
 
-  # Window position (changes require restart)
-  #
-  # Specified in number of pixels.
-  # If the position is not set, the window manager will handle the placement.
+  # Window position 
   #position:
   #  x: 0
   #  y: 0
 
   # Window padding (changes require restart)
-  #
-  # Blank space added around the window in pixels. This padding is scaled
-  # by DPI and the specified value is always added at both opposing sides.
   padding:
     x: 5
     y: 5
@@ -33,24 +23,19 @@ window:
   #dynamic_padding: false
 
   # Window decorations
-  #
   Values for `decorations`:
   #   - full: Borders and title bar
   #   - none: Neither borders nor title bar
   decorations: full
 
   # Background opacity
-  opacity: 0.8
+  opacity: 0.9
 
   # Startup Mode (changes require restart)
-  #
   # Values for `startup_mode`:
   #   - Windowed
   #   - Maximized
   #   - Fullscreen
-  #
-  # Values for `startup_mode` (macOS only):
-  #   - SimpleFullscreen
   #startup_mode: Windowed
 
   # Window title
@@ -58,7 +43,6 @@ window:
 
 #scrolling:
   # Maximum number of lines in the scrollback buffer.
-  # Specifying '0' will disable scrolling.
   history: 10000
 
   # Scrolling distance multiplier.
@@ -68,12 +52,6 @@ window:
 font:
   # Normal (roman) font face
   #normal:
-    # Font family
-    #
-    # Default:
-    #   - (macOS) Menlo
-    #   - (Linux/BSD) monospace
-    #   - (Windows) Consolas
     #family: monospace
 
     # The `style` can be specified to pick a specific face.
@@ -81,10 +59,6 @@ font:
 
   # Bold font face
   #bold:
-    # Font family
-    #
-    # If the bold family is not specified, it will fall back to the
-    # value specified for the normal font.
     #family: monospace
 
     # The `style` can be specified to pick a specific face.
@@ -92,10 +66,6 @@ font:
 
   # Italic font face
   #italic:
-    # Font family
-    #
-    # If the italic family is not specified, it will fall back to the
-    # value specified for the normal font.
     #family: monospace
 
     # The `style` can be specified to pick a specific face.
@@ -103,21 +73,15 @@ font:
 
   # Bold italic font face
   #bold_italic:
-    # Font family
-    #
-    # If the bold italic family is not specified, it will fall back to the
-    # value specified for the normal font.
     #family: monospace
 
     # The `style` can be specified to pick a specific face.
     #style: Bold Italic
 
   # Point size
-  size: 10.0
+  size: 8.5 
 
-  # Offset is the extra space around each character. `offset.y` can be thought
-  # of as modifying the line spacing, and `offset.x` as modifying the letter
-  # spacing.
+  # Offset is the extra space around each character. 
   #offset:
   #  x: 0
   #  y: 0
@@ -128,12 +92,6 @@ font:
   #glyph_offset:
   #  x: 0
   #  y: 0
-
-  # Thin stroke font rendering (macOS only)
-  #
-  # Thin strokes are suitable for retina displays, but for non-retina screens
-  # it is recommended to set `use_thin_strokes` to `false`.
-  #use_thin_strokes: true
 
   # Use built-in font for box drawing characters.
   #
@@ -149,15 +107,10 @@ font:
 colors:
   # Default colors
   primary:
-    background: '#273044'
+    background: '#303039'
     foreground: '#FFFFFF'
 
   # Cursor colors
-  #
-  # Colors which should be used to draw the terminal cursor.
-  #
-  # Allowed values are CellForeground/CellBackground, which reference the
-  # affected cell, or hexadecimal colors like #ff00ff.
   cursor:
     text: "#FFFFFF"
     cursor: "#119bba"
@@ -359,12 +312,6 @@ cursor:
 #  program: /bin/bash
 #  args:
 #    - --login
-
-# Startup directory
-#
-# Directory the shell is started in. If this is unset, or `None`, the working
-# directory of the parent process will be used.
-#working_directory: None
 
 # Send ESC (\x1b) before characters when alt is pressed.
 #alt_send_esc: true
