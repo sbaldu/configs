@@ -1,5 +1,7 @@
 NL=$'\n'
-PROMPT="%B%F{blue}[%f%F{cyan}%~%f\$(git_prompt_info)%F{blue}]%f%b ${NL} %F{14}❯%f %F{6} "
+
+PROMPT="%B%F{blue}%B┌─[%f%F{cyan}%~%f\$(git_prompt_info)%F{blue}]%b ${NL}%B└─%B%f%F{14}❯%f %F{6}%b "
+# ∮
 RPROMPT="%F{12}%n@ArchLinux %T%f"
    
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%} (%{$fg[red]%}"
