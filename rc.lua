@@ -91,7 +91,7 @@ local editor       = os.getenv("EDITOR") or "nvim"
 local browser      = "firefox"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { "Never", "gonna", "give", "you", "up" }
+awful.util.tagnames = { "Terminal  ", "Code ", "Tex  " , "Browse ", "Chat ", "Reading  ", "Music ", "Other "}
 awful.layout.layouts = {
     awful.layout.suit.tile,
     awful.layout.suit.tile.left,
@@ -244,9 +244,11 @@ globalkeys = mytable.join(
               {description="show help", group="awesome"}),
 
     -- Tag browsing
-    awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
+    -- awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
+    awful.key({ modkey,           }, "j",   awful.tag.viewprev,
               {description = "view previous", group = "tag"}),
-    awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
+    -- awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
+    awful.key({ modkey,           }, "k",  awful.tag.viewnext,
               {description = "view next", group = "tag"}),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
@@ -272,13 +274,13 @@ globalkeys = mytable.join(
     ),
 
     -- By-direction client focus
-    awful.key({ modkey }, "j",
+    awful.key({ modkey }, "Left",
         function()
             awful.client.focus.global_bydirection("down")
             if client.focus then client.focus:raise() end
         end,
         {description = "focus down", group = "client"}),
-    awful.key({ modkey }, "k",
+    awful.key({ modkey }, "Right",
         function()
             awful.client.focus.global_bydirection("up")
             if client.focus then client.focus:raise() end
