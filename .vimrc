@@ -1,6 +1,6 @@
 let mapleader =" "
 
-set tabstop=3
+set tabstop=4
 set shiftwidth=3
 noremap > >>
 noremap < <<
