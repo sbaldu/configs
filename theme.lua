@@ -114,7 +114,7 @@ theme.cal = lain.widget.cal({
 -- local cpuicon = wibox.widget.imagebox(theme.widget_cpu)
 local cpu = lain.widget.cpu({
     settings = function()
-        widget:set_markup(markup.fontfg(theme.font, theme.cpu_widget_colour, "  <b>  " .. cpu_now.usage .. "% </b>"))
+        widget:set_markup(markup.fontfg(theme.font, theme.cpu_widget_colour, "  <b>   " .. cpu_now.usage .. "% </b>"))
     end
 })
 
@@ -130,10 +130,10 @@ local temp = lain.widget.temp({
 -- local baticon = wibox.widget.imagebox(theme.widget_batt)
 local bat = lain.widget.bat({
     settings = function()
-        local perc = bat_now.perc ~= "  <b>N/A </b>" and " <b>  " .. bat_now.perc .. "%</b> " or bat_now.perc
+        local perc = bat_now.perc ~= "  <b>N/A </b>" and " <b>   " .. bat_now.perc .. "%</b> " or bat_now.perc
 
         if bat_now.ac_status == 1 then
-            perc = bat_now.perc ~= "  <b>N/A </b>" and " <b> " .. bat_now.perc .. "%</b> " or bat_now.perc 
+            perc = bat_now.perc ~= "  <b>N/A </b>" and " <b>  " .. bat_now.perc .. "%</b> " or bat_now.perc 
         end
 
         widget:set_markup(markup.fontfg(theme.font, theme.bat_widget_colour, perc .. "<b></b> "))
@@ -147,7 +147,7 @@ theme.volume = lain.widget.alsa({
         if volume_now.status == "off" then
             volume_now.level = volume_now.level .. "M"
         end
-        widget:set_markup(markup.fontfg(theme.font, theme.vol_widget_colour, "  <b>  " .. volume_now.level .. "% </b>"))
+        widget:set_markup(markup.fontfg(theme.font, theme.vol_widget_colour, "  <b>   " .. volume_now.level .. "% </b>"))
     end
 })
 
@@ -156,8 +156,7 @@ local netdowninfo = wibox.widget.textbox()
 local netupinfo = lain.widget.net({
     settings = function()
         widget:set_markup(markup.fontfg(theme.font, theme.net_widget_colour, "<b> " .. net_now.sent .. " </b>"))
-        -- netdowninfo:set_markup(markup.fontfg(theme.font, theme.net_widget_colour, "<b>  " .. net_now.received .. "</b>  "))
-        netdowninfo:set_markup(markup.fontfg(theme.font, theme.net_widget_colour, "<b>  " .. net_now.received .. "</b>  "))
+        netdowninfo:set_markup(markup.fontfg(theme.font, theme.net_widget_colour, "<b>   " .. net_now.received .. "</b>  "))
     end
 })
 
@@ -165,7 +164,7 @@ local netupinfo = lain.widget.net({
 -- local memicon = wibox.widget.imagebox(theme.widget_mem)
 local memory = lain.widget.mem({
     settings = function()
-        widget:set_markup(markup.fontfg(theme.font, theme.mem_widget_colour, "  <b>  " .. mem_now.used .. "M </b>"))
+        widget:set_markup(markup.fontfg(theme.font, theme.mem_widget_colour, "  <b>   " .. mem_now.used .. "M </b>"))
     end
 })
 
