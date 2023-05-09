@@ -14,13 +14,14 @@ return require('packer').startup(function(use)
   }
 
   -- Colorschemes
-  use('joshdick/onedark.vim')		-- The best one, a classic
-  use('jonathanfilip/vim-lucius')	-- Nice, it's all blue and green. A tiny bit pale
-  use('sainnhe/sonokai')			-- Beautiful, great grey theme
-  use('AlexvZyl/nordic.nvim') 		-- Nice but too much yellow text
-  use('folke/tokyonight.nvim')		-- Nice
-  use('tomasr/molokai') 			-- The colours are a bit too bright
-  use('cocopon/iceberg.vim') 		-- Nice but it's a bit hard to distinguish the colours
+  use('joshdick/onedark.vim')  			-- The best one, a classic
+  -- use('jonathanfilip/vim-lucius')	-- Nice, it's all blue and green. A tiny bit pale
+  use('sainnhe/sonokai')				-- Beautiful, great grey theme
+  -- use('AlexvZyl/nordic.nvim') 		-- Nice but too much yellow text
+  -- use('folke/tokyonight.nvim')		-- Nice
+  -- use('tomasr/molokai') 				-- The colours are a bit too bright
+  -- use('cocopon/iceberg.vim') 		-- Nice but it's a bit hard to distinguish the colours
+  -- use('limadm/vim-blues')			-- Nice
 
   -- Treesitter
   use {
@@ -32,10 +33,10 @@ return require('packer').startup(function(use)
   }
 
   -- Plugin for quickly navigating between a small set of frequently used files
-  use('theprimeagen/harpoon')
+  -- use('theprimeagen/harpoon')
 
   -- Plugin for managing git from inside vim
-  use('tpope/vim-fugitive')
+  -- use('tpope/vim-fugitive')
 
   -- Nerdtree
   use('preservim/nerdtree')

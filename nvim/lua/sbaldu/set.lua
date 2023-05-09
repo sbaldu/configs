@@ -22,4 +22,5 @@ vim.opt.ttyfast = true
 vim.opt.clipboard = {"unnamed", "unnamedplus"}
 
 -- Navigation
-vim.opt.scrolloff = 5
+vim.opt.scrolloff = 0 	-- keep it here just in case
+
