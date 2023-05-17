@@ -91,7 +91,7 @@ local editor       = os.getenv("EDITOR") or "nvim"
 local browser      = "firefox"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { "Terminal  ", "Code ", "Tex  " , "Browse ", "Chat ", "Reading  ", "Music ", "Other "}
+awful.util.tagnames = { "Terminal  ", "Code  ", "Tex   " , "Browse  ", "Chat  ", "Reading   ", "Music  ", "Mail  ", "Other  "}
 awful.layout.layouts = {
     awful.layout.suit.tile,
     awful.layout.suit.tile.left,
@@ -328,15 +328,20 @@ globalkeys = mytable.join(
         {description = "cycle with previous/go back", group = "client"}),
 
     -- Show/hide wibox
-    awful.key({ modkey }, "b", function ()
+    awful.key({ modkey }, "v", function ()
             for s in screen do
                 s.mywibox.visible = not s.mywibox.visible
-                if s.mybottomwibox then
-                    s.mybottomwibox.visible = not s.mybottomwibox.visible
-                end
             end
         end,
         {description = "toggle wibox", group = "awesome"}),
+
+    -- Show/hide bottom wibox
+    awful.key({ modkey }, "b", function ()
+            for s in screen do
+				s.mybottomwibox.visible = not s.mybottomwibox.visible
+            end
+        end,
+        {description = "toggle bottom wibox", group = "awesome"}),
 
     -- On-the-fly useless gaps change
     awful.key({ altkey, "Control" }, "+", function () lain.util.useless_gaps_resize(1) end,
@@ -402,10 +407,10 @@ globalkeys = mytable.join(
               {description = "show weather", group = "widgets"}),
 
     -- Screen brightness
-    awful.key({ }, "XF86MonBrightnessUp", function () os.execute("xbacklight -inc 10") end,
-              {description = "+10%", group = "hotkeys"}),
-    awful.key({ }, "XF86MonBrightnessDown", function () os.execute("xbacklight -dec 10") end,
-              {description = "-10%", group = "hotkeys"}),
+    -- awful.key({ altkey }, "b", function () os.execute("xbacklight -inc 10") end,
+              -- {description = "+10%", group = "hotkeys"}),
+    -- awful.key({ altkey }, "B", function () os.execute("xbacklight -dec 10") end,
+              -- {description = "-10%", group = "hotkeys"}),
 
     -- ALSA volume control
     awful.key({ altkey }, "Up",
@@ -784,4 +789,5 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- Startup applications
 awful.spawn.with_shell("compton")
 awful.spawn.with_shell("nm-applet")
+awful.spawn.with_shell("blueman-applet")
 --awful.spawn.with_shell("nitrogen --restore")
