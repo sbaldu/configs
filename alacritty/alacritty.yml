@@ -29,7 +29,7 @@ window:
   decorations: full
 
   # Background opacity
-  opacity: 0.9
+  opacity: 1.
 
   # Startup Mode (changes require restart)
   # Values for `startup_mode`:
@@ -43,7 +43,7 @@ window:
 
 #scrolling:
   # Maximum number of lines in the scrollback buffer.
-  history: 10000
+  history: 30000
 
   # Scrolling distance multiplier.
   multiplier: 3
@@ -79,7 +79,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 8.5 
+  size: 7.0 
 
   # Offset is the extra space around each character. 
   #offset:
