@@ -99,13 +99,13 @@ awful.layout.layouts = {
     awful.layout.suit.tile.top,
     awful.layout.suit.fair,
     awful.layout.suit.fair.horizontal,
-    awful.layout.suit.spiral,
-    awful.layout.suit.spiral.dwindle,
-    awful.layout.suit.magnifier,
-    lain.layout.cascade,
+    -- awful.layout.suit.spiral,
+    -- awful.layout.suit.spiral.dwindle,
+    -- awful.layout.suit.magnifier,
+    -- lain.layout.cascade,
     lain.layout.cascade.tile,
-    lain.layout.centerwork,
-    lain.layout.centerwork.horizontal,
+    -- lain.layout.centerwork,
+    -- lain.layout.centerwork.horizontal,
     lain.layout.termfair,
     lain.layout.termfair.center
 }
@@ -790,4 +790,5 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 awful.spawn.with_shell("compton")
 awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("blueman-applet")
+awful.spawn.with_shell("mocicon")
 --awful.spawn.with_shell("nitrogen --restore")
