@@ -1,16 +1,23 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# If you come from bash you might have to change your $PATH
+export PATH=$PATH:$HOME/bin:/usr/local/bin:/opt/programs
+export PATH="/opt/cuda/bin:$PATH"
+export LD_LIBRARY_PATH="/opt/cuda/lib64:$LD_LIBRARY_PATH"
 
-# Path to your oh-my-zsh installation.
+# Path to your oh-my-zsh installation
 export ZSH="$HOME/.oh-my-zsh"
-export EDITOR="nvim"
 
+# Export enviroment variables
+export EDITOR="nvim"
+export PDF_VIEWER="zathura"
+export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
+
+# Set zsh theme
 ZSH_THEME="myTheme"
 
 # ➜ ➔  ➤ ∮
 
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+# Uncomment to enable command auto-correction
+ENABLE_CORRECTION="false"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -20,28 +27,28 @@ ZSH_THEME="myTheme"
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
+# Plugin for command autosuggestions
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
 alias ls="lsd -lh --group-dirs first"
-alias nano="nano -gblm"
-alias pdf="zathura"
-alias nv="nvim"
+alias pdf="source ~/Documents/Configs/scripts/pdf.sh"
 alias vim="nvim"
-
-# Shortcuts
-alias gsoc="cd ~/Documents/GSOC/clue/ ; clear"
-alias physics="cd ~/Documents/Courses/Physics_Unibo ; clear"
+alias spread="sc-im"
+alias newtex="source ~/Documents/Scripts/makeTex.sh"
 alias new="source ~/Documents/Scripts/newterminal.sh &"
+alias gnome="gnome-terminal & disown"
 
 # Keyboard layout
 setxkbmap us
 
 # sshkey
-eval "$(ssh-agent -s)" && ssh-add ~/archKey; clear
+eval "$(ssh-agent -s)" && ssh-add ~/.ssh/archKey; clear
 
 # "Useful" messages
 neofetch
 echo "I use Arch Linux BTW"
+export GPG_TTY=$(tty)
+
