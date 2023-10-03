@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/home/simone/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["iceberg.vim"] = {
+    loaded = true,
+    path = "/home/simone/.local/share/nvim/site/pack/packer/start/iceberg.vim",
+    url = "https://github.com/cocopon/iceberg.vim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/simone/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -129,10 +134,25 @@ _G.packer_plugins = {
     path = "/home/simone/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  molokai = {
+    loaded = true,
+    path = "/home/simone/.local/share/nvim/site/pack/packer/start/molokai",
+    url = "https://github.com/tomasr/molokai"
+  },
+  neoformat = {
+    loaded = true,
+    path = "/home/simone/.local/share/nvim/site/pack/packer/start/neoformat",
+    url = "https://github.com/sbdchd/neoformat"
+  },
   nerdtree = {
     loaded = true,
     path = "/home/simone/.local/share/nvim/site/pack/packer/start/nerdtree",
     url = "https://github.com/preservim/nerdtree"
+  },
+  ["nordic.nvim"] = {
+    loaded = true,
+    path = "/home/simone/.local/share/nvim/site/pack/packer/start/nordic.nvim",
+    url = "https://github.com/AlexvZyl/nordic.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -174,10 +194,20 @@ _G.packer_plugins = {
     path = "/home/simone/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/home/simone/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
+  },
   ["vim-airline"] = {
     loaded = true,
     path = "/home/simone/.local/share/nvim/site/pack/packer/start/vim-airline",
     url = "https://github.com/vim-airline/vim-airline"
+  },
+  ["vim-blues"] = {
+    loaded = true,
+    path = "/home/simone/.local/share/nvim/site/pack/packer/start/vim-blues",
+    url = "https://github.com/limadm/vim-blues"
   },
   ["vim-commentary"] = {
     loaded = true,
@@ -189,10 +219,25 @@ _G.packer_plugins = {
     path = "/home/simone/.local/share/nvim/site/pack/packer/start/vim-devicons",
     url = "https://github.com/ryanoasis/vim-devicons"
   },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/home/simone/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
+  },
   ["vim-illuminate"] = {
     loaded = true,
     path = "/home/simone/.local/share/nvim/site/pack/packer/start/vim-illuminate",
     url = "https://github.com/RRethy/vim-illuminate"
+  },
+  ["vim-lucius"] = {
+    loaded = true,
+    path = "/home/simone/.local/share/nvim/site/pack/packer/start/vim-lucius",
+    url = "https://github.com/jonathanfilip/vim-lucius"
+  },
+  ["vscode.nvim"] = {
+    loaded = true,
+    path = "/home/simone/.local/share/nvim/site/pack/packer/start/vscode.nvim",
+    url = "https://github.com/Mofiqul/vscode.nvim"
   }
 }
 
