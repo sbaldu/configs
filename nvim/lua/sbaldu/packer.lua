@@ -14,14 +14,16 @@ return require('packer').startup(function(use)
   }
 
   -- Colorschemes
-  use('joshdick/onedark.vim')  			-- The best one, a classic
-  -- use('jonathanfilip/vim-lucius')	-- Nice, it's all blue and green. A tiny bit pale
-  use('sainnhe/sonokai')				-- Beautiful, great grey theme
-  -- use('AlexvZyl/nordic.nvim') 		-- Nice but too much yellow text
-  -- use('folke/tokyonight.nvim')		-- Nice
-  -- use('tomasr/molokai') 				-- The colours are a bit too bright
-  -- use('cocopon/iceberg.vim') 		-- Nice but it's a bit hard to distinguish the colours
-  -- use('limadm/vim-blues')			-- Nice
+  use('joshdick/onedark.vim')  		-- The best one, a classic
+  use('jonathanfilip/vim-lucius')	-- Nice, it's all blue and green. A tiny bit pale
+  use('sainnhe/sonokai')			-- Beautiful, great grey theme
+  use('AlexvZyl/nordic.nvim') 		-- Nice but too much yellow text
+  use('folke/tokyonight.nvim')		-- Nice
+  use('tomasr/molokai') 			-- The colours are a bit too bright
+  use('cocopon/iceberg.vim') 		-- Nice but it's a bit hard to distinguish the colours
+  use('limadm/vim-blues')			-- Nice
+  use('Mofiqul/vscode.nvim')        -- Classic vscode theme
+  use('liuchengxu/space-vim-dark')
 
   -- Treesitter
   use {
@@ -55,6 +57,12 @@ return require('packer').startup(function(use)
 
   -- Plugin for bulletting lists in text files
   use('https://github.com/dkarter/bullets.vim')
+
+  -- Plugin for git use inside vim
+  use('tpope/vim-fugitive')
+
+  -- Neoformat
+  use('sbdchd/neoformat')
 
   -- Autocompletion with LSP
   use {
