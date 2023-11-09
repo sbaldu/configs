@@ -35,13 +35,10 @@ return require('packer').startup(function(use)
   }
 
   -- Plugin for quickly navigating between a small set of frequently used files
-  -- use('theprimeagen/harpoon')
-
-  -- Plugin for managing git from inside vim
-  -- use('tpope/vim-fugitive')
+  use('theprimeagen/harpoon')
 
   -- Nerdtree
-  use('preservim/nerdtree')
+  -- use('preservim/nerdtree')
 
   -- Icons for nerdtree
   use('ryanoasis/vim-devicons')
@@ -90,6 +87,15 @@ return require('packer').startup(function(use)
       {'L3MON4D3/LuaSnip'},
     }
   }
+
+  -- github copilot
+  use {'github/copilot.vim', branch = 'release' }
+
+  -- nvim-tree
+  use('nvim-tree/nvim-tree.lua')
+
+  -- nvim-tree file icons
+  use('nvim-tree/nvim-web-devicons')
 
 end)
 
