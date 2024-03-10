@@ -1,7 +1,8 @@
 
-function SetColors(color)
-	color = color or "onedark"
-	vim.cmd.colorscheme(color)
+function Color(c)
+	-- color = color or "onedark"
+	c = c or "vscode"
+	vim.cmd.colorscheme(c)
 
 	vim.opt.termguicolors = true
 	-- If you want the background to be transparent
@@ -9,4 +10,4 @@ function SetColors(color)
 	-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none' })
 end
 
-SetColors()
+Color()

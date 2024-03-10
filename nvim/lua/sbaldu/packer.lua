@@ -9,8 +9,7 @@ return require('packer').startup(function(use)
 
   -- Fuzzy file finder
   use {
-      'nvim-telescope/telescope.nvim', tag = '0.1.1',
-      requires = { {'nvim-lua/plenary.nvim'} }
+      'nvim-telescope/telescope.nvim', tag = '0.1.4', requires = { {'nvim-lua/plenary.nvim'} }
   }
 
   -- Colorschemes
@@ -24,6 +23,12 @@ return require('packer').startup(function(use)
   use('limadm/vim-blues')			-- Nice
   use('Mofiqul/vscode.nvim')        -- Classic vscode theme
   use('liuchengxu/space-vim-dark')
+  use('romainl/Apprentice')
+  use('crusoexia/vim-dracula')
+  use('Mofiqul/dracula.nvim')
+  use{'catppuccin/nvim', as = 'catpuccin'}
+  use{'navarasu/onedark.nvim', as = 'onedark2'}
+  use('olimorris/onedarkpro')
 
   -- Treesitter
   use {
