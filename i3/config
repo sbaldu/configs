@@ -1,0 +1,118 @@
+
+include $HOME/.config/i3/workspaces.conf
+
+# set monitors
+set $left-monitor eDP-1
+set $right-monitor DP-1
+# set $right-monitor DP-2-1
+
+# use win key as mod key
+set $mod Mod4
+set $alt Mod1
+
+# dmenu
+bindsym $mod+r exec --no-startup-id dmenu_run
+
+# workspaces
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+
+bindsym Ctrl+1 workspace 10
+bindsym Ctrl+2 workspace 11
+bindsym Ctrl+3 workspace 12
+bindsym Ctrl+4 workspace 13
+bindsym Ctrl+5 workspace 14
+
+# move focused window to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+
+bindsym Ctrl+Shift+1 move container to workspace 10
+bindsym Ctrl+Shift+2 move container to workspace 11
+bindsym Ctrl+Shift+3 move container to workspace 12
+bindsym Ctrl+Shift+4 move container to workspace 13
+bindsym Ctrl+Shift+5 move container to workspace 14
+
+# moving through windows
+bindsym $alt+a focus left
+bindsym $alt+d focus right
+bindsym $alt+w focus up
+bindsym $alt+s focus down
+
+bindsym $mod+m fullscreen toggle
+bindsym $mod+Shift+r restart
+
+bindsym $mod+v split v
+bindsym $mod+x split h
+bindsym $mod+e layout toggle split
+bindsym $mod+w layout tabbed
+bindsym $mod+s layout stacking
+
+# close window
+bindsym $mod+Shift+c kill
+
+# cycling
+bindsym $mod+k workspace next
+bindsym $mod+j workspace prev
+
+bindsym $alt+k exec i3-cycle right
+bindsym $alt+j exec i3-cycle left
+
+# launch terminal 
+bindsym $mod+Return exec --no-startup-id alacritty
+
+# toggle floating
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+
+# launcher for frequent apps
+set $mode_launcher Launch: [f]irefox [t]hunderbird
+bindsym $mod+o mode "$mode_launcher"
+
+mode "$mode_launcher" {
+    bindsym f exec firefox
+    bindsym t exec thunderbird
+
+    bindsym Escape mode "default"
+    bindsym Return mode "default"
+}
+
+no_focus [window_role="pop-up"]
+
+# gaps
+gaps inner 5
+gaps outer 0
+smart_gaps off
+
+# exit
+bindsym $mod+Shift+e exec --no-startup-id i3-msg exit
+
+# shrink title bars
+for_window [class="^.*"] border pixel 3
+#client.focused #ffffff
+for_window [window_role="alert"] floating enable
+
+# lock screen
+# bindsym $mod+shift+x exec betterlockscreen -l dim
+bindsym $mod+shift+l exec i3lock -i Pictures/mountain.jpg -t
+
+# start-up applications 
+exec_always --no-startup-id nitrogen --restore
+exec_always --no-startup-id picom &
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh 
+exec_always --no-startup-id nm-applet
+exec_always --no-startup-id blueman-applet
