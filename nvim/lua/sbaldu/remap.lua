@@ -10,3 +10,6 @@ vim.keymap.set("n", "<leader>a", "<C-w>h")
 vim.keymap.set("n", "<leader>d", "<C-w>l")
 vim.keymap.set("n", "<leader>s", "<C-w>j")
 vim.keymap.set("n", "<leader>w", "<C-w>k")
+
+-- clang-format
+vim.keymap.set("n", "<leader>cg", ":%!clang-format<CR>")

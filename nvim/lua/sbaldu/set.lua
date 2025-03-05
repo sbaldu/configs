@@ -19,7 +19,7 @@ vim.opt.syntax = "on"
 vim.opt.ttyfast = true
 
 -- Use the system clipboard for easier cut and paste
-vim.opt.clipboard = {"unnamed", "unnamedplus"}
+vim.opt.clipboard = {"unnamed"}
 
 -- Navigation
 vim.opt.scrolloff = 0 	-- keep it here just in case
