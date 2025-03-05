@@ -1,15 +1,14 @@
 
 local lsp = require("lsp-zero")
-require'lspconfig'.pyright.setup{}
-require'lspconfig'.clangd.setup{}
+-- require'lspconfig'.pyright.setup{}
+-- require'lspconfig'.clangd.setup{}
 
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-  'tsserver',
   'rust_analyzer',
-  'clangd',
-  'pyright'
+  --'clangd',
+  --'pyright'
 })
 
 -- Fix Undefined global 'vim'
@@ -67,12 +66,12 @@ vim.lsp.set_log_level("off")
 
 local cmp_nvim_lsp = require "cmp_nvim_lsp"
 
-require("lspconfig").clangd.setup {
-  on_attach = on_attach,
-  capabilities = cmp_nvim_lsp.default_capabilities(),
-  cmd = {
-    "clangd",
-    "--offset-encoding=utf-16",
-  },
-  filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
-}
+-- require("lspconfig").clangd.setup {
+--   on_attach = on_attach,
+--   capabilities = cmp_nvim_lsp.default_capabilities(),
+--   cmd = {
+--     "clangd",
+--     "--offset-encoding=utf-16",
+--   },
+--   filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
+-- }
