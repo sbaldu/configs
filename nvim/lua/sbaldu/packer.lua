@@ -13,7 +13,7 @@ return require('packer').startup(function(use)
   }
 
   -- Colorschemes
-  use('joshdick/onedark.vim')  		-- The best one, a classic
+  use('olimorris/onedarkpro.nvim')  		-- The best one, a classic
   use('jonathanfilip/vim-lucius')	-- Nice, it's all blue and green. A tiny bit pale
   use('sainnhe/sonokai')			-- Beautiful, great grey theme
   use('AlexvZyl/nordic.nvim') 		-- Nice but too much yellow text
@@ -24,20 +24,26 @@ return require('packer').startup(function(use)
   use('Mofiqul/vscode.nvim')        -- Classic vscode theme
   use('liuchengxu/space-vim-dark')
   use('romainl/Apprentice')
-  use('crusoexia/vim-dracula')
-  use('Mofiqul/dracula.nvim')
+  -- use('crusoexia/vim-dracula')
+  -- use('Mofiqul/dracula.nvim')
   use{'catppuccin/nvim', as = 'catpuccin'}
   use{'navarasu/onedark.nvim', as = 'onedark2'}
-  use('olimorris/onedarkpro')
+  use('gregsexton/Muon')
+  use('blackbirdtheme/vim')
+  use('plainfingers/black_is_the_color')
+  use{'sar/extra-darkplus.nvim', as = 'darkplus'}
+  use('twerth/ir_black')
+  use('MultisampledNight/colorschemes')
+  use('henrypoydar/vim-colors-ir-dark-gray')
 
   -- Treesitter
-  use {
+	 use {
 	'nvim-treesitter/nvim-treesitter',
 	run = function()
 		local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
 		ts_update()
 	end,
-  }
+	 }
 
   -- Plugin for quickly navigating between a small set of frequently used files
   use('theprimeagen/harpoon')
@@ -46,7 +52,7 @@ return require('packer').startup(function(use)
   -- use('preservim/nerdtree')
 
   -- Icons for nerdtree
-  use('ryanoasis/vim-devicons')
+  -- use('ryanoasis/vim-devicons')
 
   -- Plugin for easily commenting lines
   use('tpope/vim-commentary')
@@ -55,13 +61,17 @@ return require('packer').startup(function(use)
   use('vim-airline/vim-airline')
 
   -- Illuminate repeated words
-  use('RRethy/vim-illuminate')
+  -- use('RRethy/vim-illuminate')
 
   -- Plugin for bulletting lists in text files
   use('https://github.com/dkarter/bullets.vim')
 
   -- Plugin for git use inside vim
+  use('jesseduffield/lazygit')
   use('tpope/vim-fugitive')
+
+  -- github access on nvim
+  use('pwntester/octo.nvim')
 
   -- Neoformat
   use('sbdchd/neoformat')
@@ -101,6 +111,15 @@ return require('packer').startup(function(use)
 
   -- nvim-tree file icons
   use('nvim-tree/nvim-web-devicons')
+
+  -- git worktree
+  use('ThePrimeagen/git-worktree.nvim')
+
+  -- transparency
+  use('xiyaowong/transparent.nvim')
+
+  -- calendar
+  use('itchyny/calendar.vim')
 
 end)
 
