@@ -3,8 +3,9 @@ include $HOME/.config/i3/workspaces.conf
 
 # set monitors
 set $left-monitor eDP-1
-set $right-monitor DP-1
+# set $right-monitor DP-1
 # set $right-monitor DP-2-1
+set $right-monitor DP-2
 
 # use win key as mod key
 set $mod Mod4
@@ -73,7 +74,8 @@ bindsym $alt+k exec i3-cycle right
 bindsym $alt+j exec i3-cycle left
 
 # launch terminal 
-bindsym $mod+Return exec --no-startup-id alacritty
+# bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+Return exec --no-startup-id konsole
 
 # toggle floating
 bindsym $mod+Shift+space floating toggle
@@ -105,14 +107,15 @@ bindsym $mod+Shift+e exec --no-startup-id i3-msg exit
 for_window [class="^.*"] border pixel 3
 #client.focused #ffffff
 for_window [window_role="alert"] floating enable
+no_focus [window_role="alert"]
 
 # lock screen
 # bindsym $mod+shift+x exec betterlockscreen -l dim
-bindsym $mod+shift+l exec i3lock -i Pictures/mountain.jpg -t
-
+bindsym $mod+shift+l exec i3lock -i Pictures/forest.jpg -t
 # start-up applications 
 exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id picom &
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh 
 exec_always --no-startup-id nm-applet
 exec_always --no-startup-id blueman-applet
+exec --no-startup-id xset s off -dpms
