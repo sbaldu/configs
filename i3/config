@@ -75,11 +75,16 @@ bindsym $alt+j exec i3-cycle left
 
 # launch terminal 
 # bindsym $mod+Return exec --no-startup-id alacritty
-bindsym $mod+Return exec --no-startup-id konsole
+bindsym $mod+Return exec --no-startup-id alacritty
 
 # toggle floating
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
+
+bindsym XF86AudioRaiseVolume exec ~/.config/i3/volume.sh up && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioLowerVolume exec ~/.config/i3/volume.sh down && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioMute exec ~/.config/i3/volume.sh toggle && pkill -RTMIN+10 i3blocks
+
 
 # launcher for frequent apps
 set $mode_launcher Launch: [f]irefox [t]hunderbird
@@ -104,10 +109,15 @@ smart_gaps off
 bindsym $mod+Shift+e exec --no-startup-id i3-msg exit
 
 # shrink title bars
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 0
 #client.focused #ffffff
 for_window [window_role="alert"] floating enable
 no_focus [window_role="alert"]
+
+bar {
+    status_command i3status
+	tray_output primary
+}
 
 # lock screen
 # bindsym $mod+shift+x exec betterlockscreen -l dim
@@ -115,7 +125,7 @@ bindsym $mod+shift+l exec i3lock -i Pictures/forest.jpg -t
 # start-up applications 
 exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id picom &
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh 
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh 
 exec_always --no-startup-id nm-applet
 exec_always --no-startup-id blueman-applet
 exec --no-startup-id xset s off -dpms

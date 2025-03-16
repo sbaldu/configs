@@ -1,0 +1,56 @@
+# i3status configuration file
+
+general {
+    colors = true
+    interval = 1
+}
+
+order += "cpu_temperature 0"
+order += "memory"
+# order += "disk /"
+order += "ethernet eth0"
+order += "wireless wlan0"
+order += "battery 0"
+order += "volume master"
+order += "time"
+
+cpu_temperature 0 {
+    format = "CPU: %degrees°C"
+    path = "/sys/class/thermal/thermal_zone0/temp"
+}
+
+memory {
+        format = "%used / %total"
+        threshold_degraded = "10%"
+        format_degraded = "MEMORY: %free / %total"
+}
+
+disk "/" {
+    format = "Disk: %avail"
+}
+
+ethernet eth0 {
+    format_up = "LAN: %ip"
+    format_down = "LAN: down"
+}
+
+wireless wlan0 {
+    format_up = "WiFi: %essid %ip"
+    format_down = "WiFi: down"
+}
+
+battery 0 {
+    format = "Battery: %status %percentage"
+}
+
+volume master {
+    format = "🔊 %volume"
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
+}
+
+time {
+    format = "%Y-%m-%d %H:%M:%S"
+}
+
