@@ -1,0 +1,63 @@
+[colors.bright]
+black = "#5E5C64"
+blue = "#308DFF"
+cyan = "#33C7DE"
+green = "#3BFF8E"
+magenta = "#C061CB"
+red = "#F66151"
+white = "#FFFFFF"
+yellow = "#E9AD0C"
+
+[colors.cursor]
+cursor = "#119bba"
+text = "#FFFFFF"
+
+[colors.dim]
+black = "#131415"
+blue = "#556a7d"
+cyan = "#5b7d78"
+green = "#777c44"
+magenta = "#75617b"
+red = "#C01C28"
+white = "#828482"
+yellow = "#9e824c"
+
+[colors.normal]
+black = "#171421"
+blue = "#207EF5"
+cyan = "#2AA1B3"
+green = "#2ECE84"
+magenta = "#A347BA"
+red = "#DA202E"
+white = "#D0CFCC"
+yellow = "#FF943A"
+
+[colors.primary]
+# background = "#303039"
+background = "#2f2f2f"
+foreground = "#FFFFFF"
+
+[cursor]
+thickness = 0.15
+
+[cursor.style]
+blinking = "Off"
+shape = "Beam"
+
+[font]
+size = 9.0
+
+[window]
+decorations = "full"
+#history = 30000
+#multiplier = 3
+opacity = 0.90
+title = "Alacritty"
+
+[window.dimensions]
+columns = 120
+lines = 40
+
+[window.padding]
+x = 5
+y = 5
