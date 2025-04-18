@@ -1,0 +1,3 @@
+#
+
+sudo cp pdf /bin
