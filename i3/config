@@ -84,6 +84,8 @@ bindsym $mod+space focus mode_toggle
 bindsym XF86AudioRaiseVolume exec ~/.config/i3/volume.sh up && pkill -RTMIN+10 i3blocks
 bindsym XF86AudioLowerVolume exec ~/.config/i3/volume.sh down && pkill -RTMIN+10 i3blocks
 bindsym XF86AudioMute exec ~/.config/i3/volume.sh toggle && pkill -RTMIN+10 i3blocks
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl -q set 5%+
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl -q set 5%-
 
 
 # launcher for frequent apps
@@ -109,10 +111,12 @@ smart_gaps off
 bindsym $mod+Shift+e exec --no-startup-id i3-msg exit
 
 # shrink title bars
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 1
 #client.focused #ffffff
 for_window [window_role="alert"] floating enable
 no_focus [window_role="alert"]
+
+for_window [title="^Figure.*"] floating enable
 
 bar {
     status_command i3status
@@ -129,3 +133,11 @@ exec_always --no-startup-id picom &
 exec_always --no-startup-id nm-applet
 exec_always --no-startup-id blueman-applet
 exec --no-startup-id xset s off -dpms
+
+exec --no-startup-id xsetroot -cursor_name left_ptr
+exec --no-startup-id xcursor-theme "Adwaita"
+exec --no-startup-id xcursor-size 24
+
+# pop-up notifications
+exec --no-startup-id dunst
+
