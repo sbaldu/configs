@@ -17,8 +17,8 @@ find ~/.config/nvim/lua/$user_name -type f -name "*.lua" -exec sed -i "s/"sbaldu
 
 ## install neovim
 cd ~ ;
-git clone https://github.com/neovim/neovim && cd neovim && make -j 16 CMAKE_INSTALL_PREFIX=$HOME && make install
-cd ~  && echo "alias nvim=~/neovim/build/bin/nvim" >> ~/.bashrc && source ~/.bashrc
+git clone https://github.com/neovim/neovim && cd neovim && make -j 16 CMAKE_INSTALL_PREFIX=${install_path} && make install
+cd ~  && echo "export PATH=$PATH:~/neovim/build/bin/nvim" >> ~/.bashrc && source ~/.bashrc
 
 ## install packer
 git clone --depth 1 https://github.com/wbthomason/packer.nvim \
