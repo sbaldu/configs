@@ -20,7 +20,7 @@ return {
 
       require("lspconfig").clangd.setup({
         cmd = { "clangd", "--background-index", "--clang-tidy" },
-        capabilities = capabilities, -- 👈 connects cmp and LSP
+        capabilities = capabilities,
         filetypes = { "c", "cpp", "cuda" },
         root_dir = require("lspconfig.util").root_pattern(
           "compile_commands.json",

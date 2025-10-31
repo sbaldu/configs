@@ -1,12 +1,18 @@
 return {
   "nvim-telescope/telescope.nvim",
   dependencies = { "nvim-lua/plenary.nvim" },
+  opts = {
+	  pickers = {
+		  colorscheme = {
+			  enable_preview = true,
+		  },
+	  },
+  },
+
   config = function()
 	require("telescope").setup({})
 	-- local gwkt = require('telescope').extensions.git_worktree
 	-- local builtin = require('telescope.builtin')
-
-	local keymap = vim.keymap
 
 	-- File finder
 	local builtin = require('telescope.builtin')
@@ -14,6 +20,7 @@ return {
 	vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
 	vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 	vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+	vim.keymap.set("n", "<leader>ut", "<cmd>Telescope colorscheme<cr>", { desc = "Pick colorscheme" })
 	-- keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
 	-- keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Fuzzy find recent files" })
 	-- keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find string in cwd" })
