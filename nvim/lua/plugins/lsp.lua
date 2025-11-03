@@ -14,29 +14,28 @@ return {
 
   -- Main LSP plugin
   {
-    "neovim/nvim-lspconfig",
-    config = function()
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
+	"neovim/nvim-lspconfig",
+	config = function()
+	  local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-      require("lspconfig").clangd.setup({
-        cmd = { "clangd", "--background-index", "--clang-tidy" },
-        capabilities = capabilities,
-        filetypes = { "c", "cpp", "cuda" },
-        root_dir = require("lspconfig.util").root_pattern(
-          "compile_commands.json",
-          ".git",
-          "CMakeLists.txt"
-        ),
-      })
+	  vim.lsp.config["clangd"] = {
+		cmd = { "clangd", "--background-index", "--clang-tidy" },
+		capabilities = capabilities,
+		filetypes = { "c", "cpp", "cuda" },
+		root_dir = vim.fs.root(0, { "compile_commands.json", ".git", "CMakeLists.txt" }),
+	  }
 
-      -- LSP keymaps
-      vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
-      vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
-      vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
-      vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "List references" })
-      vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover docs" })
-    end,
+	  vim.lsp.start(vim.lsp.config["clangd"])
+
+	  -- LSP keymaps
+	  vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+	  vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
+	  vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
+	  vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "List references" })
+	  vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover docs" })
+	end,
   },
+
 
   -- Autocompletion
   {
