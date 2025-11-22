@@ -14,3 +14,5 @@ vim.keymap.set("n", "<leader>w", "<C-w>k")
 -- clang-format
 vim.keymap.set("n", "<leader>cg", ":%!clang-format<CR>")
 vim.keymap.set("n", "<leader>cf", ":%!cmake-format<CR>")
+
+vim.keymap.set("n", "<leader>vd", ":lua vim.diagnostic.setloclist()<CR>")

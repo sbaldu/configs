@@ -47,6 +47,8 @@ return {
                 "gitignore",
                 "c",
 				"cpp",
+				"cmake",
+				"cuda",
                 "rust",
             },
             incremental_selection = {

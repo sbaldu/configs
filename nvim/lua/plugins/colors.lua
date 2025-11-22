@@ -1,8 +1,8 @@
 local themes = {
   {
     'sainnhe/sonokai',
-    lazy = false,
-    priority = 1000,
+	lazy = false,
+	priority = 2,
     config = function()
       vim.g.sonokai_enable_italic = true
       vim.cmd.colorscheme('sonokai')
@@ -10,6 +10,8 @@ local themes = {
   },
   {
     "blazkowolf/gruber-darker.nvim",
+	lazy = false,
+	priority = 2,
     opts = {
       bold = true,
       invert = {
@@ -28,12 +30,16 @@ local themes = {
     },
   },
   {
-	'marko-cerovac/material.nvim'
+	'marko-cerovac/material.nvim',
+	config = function()
+	  require('material').setup({})
+	  vim.cmd.colorscheme('material')
+	end,
   },
   {
     "scottmckendry/cyberdream.nvim",
-    lazy = false,
-    priority = 1000,
+	lazy = false,
+	priority = 3
   },
   {
 	'mhartington/oceanic-next'
@@ -41,7 +47,7 @@ local themes = {
   {
 	'uloco/bluloco.nvim',
 	lazy = false,
-	priority = 1000,
+	priority = 5,
 	dependencies = { 'rktjmp/lush.nvim' },
 	config = function()
 	  -- your optional config goes here, see below.
@@ -50,7 +56,7 @@ local themes = {
   {
 	"xeind/nightingale.nvim",
 	lazy = false,
-	priority = 1000,
+	priority = 6,
 	config = function()
 		require("nightingale").setup({
 			transparent = true,
@@ -62,14 +68,6 @@ local themes = {
 	'DonJulve/NeoCyberVim'
   },
   {
-    "Skalyaev/a-nvim-theme",
-    priority = 42,
-
-    config = function()
-        vim.cmd([[colorscheme neon]])
-    end
-  },
-  {
 	'Mofiqul/vscode.nvim'
   },
   {
@@ -77,6 +75,8 @@ local themes = {
   },
   {
     "tiagovla/tokyodark.nvim",
+	lazy = false,
+	priority = 1,
     opts = {
         -- custom options here
     },
@@ -88,11 +88,11 @@ local themes = {
 }
 
 -- Switch between installed themes
-local theme_names = { "sonokai",
-					  "gruber-darker",
-					  "material",
-					  "cyberdream",
+local theme_names = { "material",
 					  "bluloco",
+					  "cyberdream",
+					  "gruber-darker",
+					  "sonokai",
 					  "nightingale",
 					  "NeoCyberVim",
 					  "vscode",

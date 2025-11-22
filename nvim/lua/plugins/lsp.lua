@@ -33,6 +33,18 @@ return {
 	  vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
 	  vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "List references" })
 	  vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover docs" })
+
+	  vim.api.nvim_create_autocmd("CursorHold", {
+		callback = function()
+		  vim.diagnostic.open_float(nil, {
+			focus = false,
+			scope = "cursor",
+			border = "rounded",
+			source = "always",
+			prefix = "",
+		  })
+		end,
+	})
 	end,
   },
 
