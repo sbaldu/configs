@@ -6,8 +6,9 @@ vim.opt.cursorline = true
 
 -- Set number of spaces in tab
 vim.opt.tabstop = 4
-vim.opt.shiftwidth = 2
+vim.opt.shiftwidth = 4
 vim.opt.autoindent = true
+vim.opt.expandtab = true
 
 -- Searching options
 vim.opt.smartcase = true
@@ -22,5 +23,8 @@ vim.opt.ttyfast = true
 vim.opt.clipboard = {"unnamed", "unnamedplus"}
 
 -- Navigation
-vim.opt.scrolloff = 0 	-- keep it here just in case
+vim.opt.scrolloff = 8
 
+vim.opt.updatetime = 250
+vim.opt.signcolumn = "yes"
+vim.opt.termguicolors = true
