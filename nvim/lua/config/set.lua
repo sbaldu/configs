@@ -5,8 +5,8 @@ vim.opt.relativenumber = true
 vim.opt.cursorline = true
 
 -- Set number of spaces in tab
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
 vim.opt.autoindent = true
 vim.opt.expandtab = true
 
