@@ -4,4 +4,7 @@ return {
   dependencies = {
     "nvim-treesitter/nvim-treesitter",
   },
+  keys = {
+    { "<leader>i", "<cmd>AerialToggle!<cr>", desc = "Aerial Toggle" },
+  },
 }

@@ -27,17 +27,14 @@ return {
                 additional_vim_regex_highlighting = false,
             },
             indent = { enable = true },
+            auto_install = false,
+            sync_install = false,
             autotag = {
                 enable = true,
             },
             ensure_installed = {
                 "json",
-                "javascript",
-                "typescript",
-                "tsx",
                 "yaml",
-                "html",
-                "css",
                 "markdown",
                 "markdown_inline",
                 "bash",
@@ -46,10 +43,26 @@ return {
                 "dockerfile",
                 "gitignore",
                 "c",
-				"cpp",
-				"cmake",
-				"cuda",
+                "cpp",
+                "cmake",
+                "cuda",
                 "rust",
+                "comment",
+                "query"
+            },
+            textobjects = {
+              select = {
+                enable = true,
+                lookahead = true,
+                keymaps = {
+                  ["af"] = "@function.outer",
+                  ["if"] = "@function.inner",
+                  ["ac"] = "@class.outer",
+                  ["ic"] = "@class.inner",
+                  ["aa"] = "@parameter.outer",
+                  ["ia"] = "@parameter.inner",
+                },
+              },
             },
             incremental_selection = {
                 enable = true,
@@ -59,16 +72,6 @@ return {
                     scope_incremental = false,
                     node_decremental = "<bs>",
                 },
-            },
-            rainbow = {
-                enable = true,
-                disable = { "html" },
-                extended_mode = false,
-                max_file_lines = nil,
-            },
-            context_commentstring = {
-                enable = true,
-                enable_autocmd = false,
             },
         })
     end,
