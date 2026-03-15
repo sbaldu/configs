@@ -1,0 +1,40 @@
+# CPU POWER MODE BUTTON
+[power]
+command=~/.config/i3blocks/scripts/power-mode.sh
+interval=2
+
+# CPU TEMP
+[cpu]
+command=~/.config/i3blocks/scripts/cpu.sh
+interval=2
+
+# MEMORY
+[mem]
+command=~/.config/i3blocks/scripts/mem.sh
+interval=2
+
+# ETHERNET
+[eth]
+command=~/.config/i3blocks/scripts/eth.sh
+interval=5
+
+# WIFI
+[wifi]
+command=~/.config/i3blocks/scripts/wifi.sh
+interval=5
+
+# BATTERY
+[battery]
+command=~/.config/i3blocks/scripts/battery.sh
+interval=10
+
+# VOLUME
+[volume]
+command=~/.config/i3blocks/scripts/volume.sh
+interval=1
+signal=10
+
+# TIME
+[time]
+command=~/.config/i3blocks/scripts/time.sh
+interval=1
