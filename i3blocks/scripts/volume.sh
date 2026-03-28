@@ -2,8 +2,8 @@
 
 case "$BLOCK_BUTTON" in
     1) pamixer -t ;;      # left click mute toggle
-    4) pamixer -i 5 ;;    # scroll up
-    5) pamixer -d 5 ;;    # scroll down
+    4) pamixer --allow-boost -i 5 ;;    # scroll up
+    5) pamixer --allow-boost -d 5 ;;    # scroll down
 esac
 
 vol=$(pamixer --get-volume)
