@@ -91,9 +91,9 @@ bindsym $mod+Return exec --no-startup-id kitty
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
-bindsym XF86AudioRaiseVolume exec ~/.config/i3/volume.sh up && pkill -RTMIN+10 i3blocks
-bindsym XF86AudioLowerVolume exec ~/.config/i3/volume.sh down && pkill -RTMIN+10 i3blocks
-bindsym XF86AudioMute exec ~/.config/i3/volume.sh toggle && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer --allow-boost -i 5
+bindsym XF86AudioLowerVolume exec --no-startup-id pamixer --allow-boost -d 5
+bindsym XF86AudioMute exec --no-startup-id pamixer -t
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl -q set 5%+
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl -q set 5%-
 
