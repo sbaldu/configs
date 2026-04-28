@@ -1,7 +1,8 @@
 # CPU POWER MODE BUTTON
 [power]
 command=~/.config/i3blocks/scripts/power-mode.sh
-interval=2
+interval=once
+signal=10
 
 # CPU TEMP
 [cpu]

@@ -103,7 +103,7 @@ set $mode_launcher Launch: [f]irefox [t]hunderbird
 bindsym $mod+o mode "$mode_launcher"
 
 mode "$mode_launcher" {
-    bindsym f exec firefox
+    bindsym f exec librewolf
     bindsym t exec thunderbird
 
     bindsym Escape mode "default"
@@ -145,9 +145,9 @@ exec_always --no-startup-id nm-applet
 exec_always --no-startup-id blueman-applet
 exec --no-startup-id xset s off -dpms
 
-exec --no-startup-id xsetroot -cursor_name left_ptr
-exec --no-startup-id xcursor-theme "Adwaita"
-exec --no-startup-id xcursor-size 24
+# exec --no-startup-id xsetroot -cursor_name left_ptr
+# exec --no-startup-id xcursor-theme "Adwaita"
+# exec --no-startup-id xcursor-size 24
 
 # pop-up notifications
 exec --no-startup-id dunst

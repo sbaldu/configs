@@ -11,6 +11,7 @@ case "$BLOCK_BUTTON" in
         else
             powerprofilesctl set power-saver
         fi
+        pkill -RTMIN+10 i3blocks
         ;;
 esac
 
