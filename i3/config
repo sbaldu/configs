@@ -5,9 +5,8 @@ exec --no-startup-id autorandr --change
 
 # set monitors
 set $left-monitor eDP-1
-# set $right-monitor DP-1
-# set $right-monitor DP-2-1
-set $right-monitor DP-1
+# list every port the external monitor might come up on; i3 uses the first one that's connected
+set $right-monitor DP-1 DP-1-1 DP-3 HDMI-1
 
 # use win key as mod key
 set $mod Mod4
